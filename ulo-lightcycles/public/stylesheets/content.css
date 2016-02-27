@@ -1,0 +1,68 @@
+﻿main {
+    padding: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+main .text-content {
+    width: 500px;
+    max-height : 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.img-content {
+    margin: 0;
+	padding: 0;
+    top: 90px;
+    left: 400px;
+    background-image: url(../images/credits.png);
+    background-repeat: no-repeat; 
+    min-height: 250px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+main .help-content {
+    padding-right: 200px;
+}
+
+main .help-content img {
+    width: 640px;
+    height: 480px;
+}
+
+@media (min-height: 800px) {
+    main .help-content img {
+        width: 800px;
+        height: 606px;
+    }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

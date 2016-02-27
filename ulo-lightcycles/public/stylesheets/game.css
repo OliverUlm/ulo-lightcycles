@@ -1,0 +1,118 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 80%;
+    max-width: 1000px;
+    height: 520px;
+    padding: 40px;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background: #000;
+}
+
+main #players {
+    width: 300px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 40px;
+}
+
+main #players .playerLabel {
+    display: inline-block;
+    width: 90px;
+}
+
+main #player .playerName {
+    display: inline-block;
+    max-width: 190px;
+    overflow: hidden;
+}
+
+main #playground {
+    min-width: 442px;
+    min-height: 442px;
+    border: 1px solid #fff;
+    background-color: #000030;
+}
+
+main #playground #msg {
+    padding: 10px;
+    position: absolute;
+    color: darkcyan;
+}
+
+main #playground #grid {
+    position: absolute;
+    width: 440px;
+    height: 440px;
+}
+
+#touchcontroller {
+    margin-top: 40px;
+    visibility: collapse;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+.overlay .name-input {
+    background-image: url('../images/../images/button.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 200px;
+    width: 350px;
+    height: 50px;
+    color: #000;
+}
+
+.overlay .name-input #name {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 200px;
+}
+
+@media (min-height: 800px) {
+    main {
+        margin-top: 40px;
+        height: 680px;
+        min-width: 962px;
+    }
+    main #playground {
+        min-width: 602px;
+        min-height: 602px;
+    }
+
+    main #playground #grid {
+        min-width: 600px;
+        min-height: 600px;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    #touchcontroller {
+        visibility: visible;
+    }
+}

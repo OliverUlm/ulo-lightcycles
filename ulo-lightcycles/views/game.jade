@@ -1,0 +1,37 @@
+﻿extends layout
+
+block headcontent
+  link(rel='stylesheet', href='./stylesheets/game.css')
+  script(src='/socket.io/socket.io.js')
+  script(src='https://code.responsivevoice.org/responsivevoice.js')
+  script(src='./javascripts/input.js')
+  script(src='./javascripts/model.js')
+  script(src='./javascripts/fancyrenderer.js')
+  script(src='./javascripts/game.js')
+
+block content
+  header(class='page-header')
+    nav(class='main-nav')
+      ul
+        li(class='activeNav')
+          a(href='./game') Game
+        li
+          a(href='./help') Help
+        li
+          a(href='./credits') Credits
+  div(class='overlay')
+    div(class='name-input')
+      input#name(type='text')
+      button#join Join
+  main
+    div#players No players yet...
+    div#playground
+      div#msg
+      canvas#grid(width='600' height='600')
+  div#touchcontroller
+    img(src='./images/controller.png', alt='on screen touch controls', usemap='#ControlMap')
+    map(name='ControlMap', id='ControlMap')
+      area(href='#', alt='turn down', onclick='doinput("D");return false;', title='down', shape='poly', coords='0,525,306,262,613,525')
+      area(href='#', alt='turn left', onclick='doinput("L");return false;', title='left', shape='poly', coords='0,0,306,262,0,525')
+      area(href='#', alt='turn up', onclick='doinput("U");return false;', title='up', shape='poly', coords='0,0,306,262,613,0')
+      area(href='#', alt='turn right', onclick='doinput("R");return false;', title='right', shape='poly', coords='613,0,306,262,613,525')

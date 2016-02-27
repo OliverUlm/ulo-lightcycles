@@ -1,0 +1,33 @@
+﻿*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+html {
+	font-family: Orbitron, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    background-color: #000; 
+    background-image: url(../images/background.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    color: #FFF; 
+    min-height: 100%;
+    overflow: hidden;
+}

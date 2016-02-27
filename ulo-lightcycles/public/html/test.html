@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ulo-lightcycles Tests</title>
+    <script src="../javascripts/jquery-2.2.0.min.js"></script>
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="../javascripts/input.js"></script>
+    <script type="text/javascript">
+        var socket = new io('/');
+        var controller;
+        $(document).ready(function () {
+            socket.on('myPong', function (date) {
+                var diff = Date.now() - date;
+                $('#ping').html('Ping: ' + diff + ' ms');
+            });
+            socket.on('connect', ping);
+            $('#ping').html('Ping: - ms');
+
+            var controller = new Controller();
+            controller.oninput = oninput;
+        });
+
+        function ping() {
+            var ms = Date.now();
+            socket.emit('myPing', ms);
+            setTimeout(ping, 1000);
+        }
+
+        function oninput(direction) {
+            console.log(direction);
+        }
+    </script>
+</head>
+<body>
+    <p id="ping"></p>
+</body>
+</html>

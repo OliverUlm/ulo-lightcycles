@@ -1,0 +1,18 @@
+﻿extends layout
+
+block headcontent
+  link(rel='stylesheet', href='./stylesheets/content.css')
+
+block content
+  header(class='page-header')
+    nav(class='main-nav')
+      ul
+        li
+          a(href='./game') Game
+        li(class='activeNav')
+          a(href='./help') Help
+        li
+          a(href='./credits') Credits
+  main
+      div(class='help-content')
+        img(src='./images/help.png', alt='button layout for control methods')

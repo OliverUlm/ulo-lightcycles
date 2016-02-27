@@ -1,0 +1,17 @@
+﻿extends layout
+
+block headcontent
+  link(rel='stylesheet', href='./stylesheets/index.css')
+
+block content
+  header(class='page-header')
+    img(src='./images/logo.png', alt='Lightcycles Logo')
+  main
+    nav(class='main-nav')
+      ul
+        li
+          a(href='./game') Game
+        li
+          a(href='./help') Help
+        li
+          a(href='./credits') Credits

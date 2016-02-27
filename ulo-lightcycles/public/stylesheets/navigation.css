@@ -1,0 +1,31 @@
+﻿.main-nav ul {
+    list-style: none;
+	margin: 0;
+	padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    background-image: url('../images/../images/button.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex: 1;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.main-nav a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+}
+
+.main-nav a:hover {
+    text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+}
+
+.main-nav .activeNav a {
+    text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+}

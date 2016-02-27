@@ -1,0 +1,39 @@
+﻿extends layout
+
+block headcontent
+  link(rel='stylesheet', href='./stylesheets/content.css')
+
+block content
+  header(class='page-header')
+    nav(class='main-nav')
+      ul
+        li
+          a(href='./game') Game
+        li
+          a(href='./help') Help
+        li(class='activeNav')
+          a(href='./credits') Credits
+  div(class='img-content') &nbsp;
+  main
+    div(class='text-content')
+      h2 Author
+      p Oliver Ulm, Semester Project WDP3
+
+      h2 Additional Artwork
+      p Pimp my Slide
+
+      h2 Server Side Libraries
+      ul
+        li Node.js
+        li Socket.io
+        li Express
+        li Jade
+
+      h2 Client Side Libraries
+      ul
+        li jQuery
+        li Socket.io
+        li RepsonsiveVoice.JS
+
+      h2 Special thanks to
+      p All my testers
